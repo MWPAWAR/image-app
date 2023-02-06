@@ -1,0 +1,18 @@
+.tabList {
+  border-bottom: 1px solid #dadce0;
+  display: flex;  
+  margin: 30px 15px 0 15px;
+}
+
+.tabListItem {
+  cursor: pointer;
+  padding-bottom: 15px;
+  margin-right: 2%;
+  text-align: left;
+  width: 15%;
+}
+
+.active {
+  color: blue;
+  border-bottom: 1px solid blue;
+}

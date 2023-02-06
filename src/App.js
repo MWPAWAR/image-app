@@ -1,12 +1,10 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import RecentlyAdded from './components/RecentlyAdded/RecentlyAdded';
-import Favorites from './components/Favorites/Favorites';
-import './App.css';
+import ImageListContainer from './components/ImageListContainer/ImageListContainer';
 
 const App = () => (
   <Routes>
-    <Route path="/recently-added" element={< RecentlyAdded />} />
-    <Route path="/favorites" element={<Favorites />} />
+    <Route path="/recently-added" element={<ImageListContainer activeTab="recentlyAdded" />} />
+    <Route path="/favorites" element={<ImageListContainer activeTab="favorites" />} />
     <Route path="/" element={<Navigate to="/recently-added" />} />
   </Routes>
 );

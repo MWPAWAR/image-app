@@ -1,3 +1,4 @@
+import { getMonthDateAndYear } from '../../utils/date-util';
 import imageDetailsStyles from './ImageDetails.module.css';
 
 const Row = ({ label, value }) => (
@@ -12,8 +13,8 @@ const ImageDetails = ({ selectedImage }) => {
     <div className={imageDetailsStyles.imgDetails}>
       <div className={imageDetailsStyles.informationLabel}>Information</div>
       <Row label="Uploaded by" value={selectedImage.uploadedBy} />
-      <Row label="Created" value={new Date(selectedImage.createdAt).toLocaleString()} />
-      <Row label="Last modified" value={new Date(selectedImage.updatedAt).toLocaleString()} />
+      <Row label="Created" value={getMonthDateAndYear(selectedImage.createdAt)} />
+      <Row label="Last modified" value={getMonthDateAndYear(selectedImage.updatedAt)} />
       <Row label="Dimensions" value={`${selectedImage.dimensions.height} X ${selectedImage.dimensions.width}`} />
       <Row label="Resolutions" value={`${selectedImage.resolution.height} X ${selectedImage.resolution.width}`} />
     </div>

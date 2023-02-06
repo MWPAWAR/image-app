@@ -3,10 +3,15 @@ import imageStyles from './Image.module.css';
 import classNames from 'classnames';
 import { getMbsTextByBytes } from '../../utils/get-mbs-by-bytes';
 import { toggleFavoriteImg } from '../../store/images/images';
+import { resetSelectedImg } from '../../store/imageUiState/imageUiState';
 
-const Image = ({ selectedImage }) => {
+const Image = ({ activeTab, selectedImage }) => {
   const dispatch = useDispatch();
-  const handleFavtClick = () => dispatch(toggleFavoriteImg(selectedImage.id));
+  const handleFavtClick = () => {
+    dispatch(toggleFavoriteImg(selectedImage.id));
+    // This is to reset the selected img if the active tab is favorites.
+    if (activeTab === 'favorites') dispatch(resetSelectedImg());
+  };
 
   return (
     <div>

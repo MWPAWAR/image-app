@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.heading {
+  margin: 30px 15px 15px 15px;
+}
+
 .listContainerFullWidth {
   background-color: #fafafa;
   padding: 0 20px;
@@ -15,6 +19,7 @@
 }
 
 .sheetContainer {
+  transition: transform 1s ease-in;
   background-color: #fff;
   border-left: outset 2px;
   padding: 10px;

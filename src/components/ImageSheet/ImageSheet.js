@@ -6,12 +6,12 @@ import ImageDescription from './ImageDescription';
 import ImageDetails from './ImageDetails';
 import imageSheetStyles from './ImageSheet.module.css';
 
-const ImageSheet = () => {
+const ImageSheet = ({ activeTab }) => {
   const selectedImage = useSelector(selectImageById);
 
   return (
     <div className={imageSheetStyles.imageSheet}>
-      <Image selectedImage={selectedImage} />
+      <Image selectedImage={selectedImage} activeTab={activeTab} />
       <ImageDetails selectedImage={selectedImage} />
       <ImageDescription selectedImage={selectedImage} />
       <ImageDeleteBtn selectedImage={selectedImage} />
