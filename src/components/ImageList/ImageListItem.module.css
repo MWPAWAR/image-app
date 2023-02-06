@@ -1,0 +1,28 @@
+.imageListItem {
+  cursor: pointer;
+  margin: 15px;
+  width: 200px;
+}
+
+.imageListItemImg {
+  border-radius: 10px;
+  width: 200px;
+  height: 150px;
+}
+
+.imageListItemImg:focus-within, .imageListItemImg:hover {
+  border: 2px solid blue;
+}
+
+.imageListItemName {
+  font-size: 14px;
+  padding: 10px 0 5px 0;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.imageListItemSize {
+  font-size: 15px;
+  color: #5f6368;
+}

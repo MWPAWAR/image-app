@@ -1,0 +1,22 @@
+.mainContainer {
+  display: flex;
+}
+
+.listContainerFullWidth {
+  background-color: #fafafa;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.listContainerSplitWidth {
+  background-color: #fafafa;
+  padding: 0 20px;
+  width: 70%;
+}
+
+.sheetContainer {
+  background-color: #fff;
+  border-left: outset 2px;
+  padding: 10px;
+  width: 30%;
+}
